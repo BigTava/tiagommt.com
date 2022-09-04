@@ -1,5 +1,5 @@
 import Icon from "../Icon";
-import CTA from "../CTA";
+import { CTAUnlock } from "../CTA";
 import "./styles.css";
 
 export default function Header() {
@@ -9,7 +9,7 @@ export default function Header() {
         <h5>Hello I'm</h5>
         <h1>Tiago Tavares</h1>
         <h5 className="text-light">Blockchain Developer</h5>
-        <CTA type="unlock" />
+        <CTAUnlock />
         <div className="header__socials">
           <Icon type="linkedIn" />
           <Icon type="gitHub" />
