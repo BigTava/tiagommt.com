@@ -1,0 +1,7 @@
+:root {
+  /* MEDIA_WIDTHS */
+  --deprecated_upToExtraSmall: 500;
+  --deprecated_upToSmall: 720px;
+  --deprecated_upToMedium: 960;
+  --deprecated_upToLarge: 1280;
+}

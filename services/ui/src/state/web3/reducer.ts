@@ -1,6 +1,6 @@
 import { createSlice, nanoid } from "@reduxjs/toolkit";
 
-import { SupportedChainId } from "../../modules/chains";
+import { SupportedChainId } from "../../constants/chains";
 
 export type PopupContent =
   | {
@@ -12,7 +12,7 @@ export type PopupContent =
       failedSwitchNetwork: SupportedChainId;
     };
 
-export enum ApplicationModal {
+export enum Web3Modal {
   NETWORK_SELECTOR,
 }
 
@@ -23,22 +23,26 @@ type PopupList = Array<{
   removeAfterMs: number | null;
 }>;
 
-export interface ApplicationState {
+export interface Web3State {
   readonly chainId: number | null;
-  readonly openModal: ApplicationModal | null;
+  readonly openModal: Web3Modal | null;
   readonly popupList: PopupList;
 }
 
-const initialState: ApplicationState = {
+const initialState: Web3State = {
   chainId: null,
   openModal: null,
   popupList: [],
 };
 
 const applicationSlice = createSlice({
-  name: "application",
+  name: "web3",
   initialState,
   reducers: {
+    updateWebType(state, action) {
+      const { chainId } = action.payload;
+      state.chainId = chainId;
+    },
     updateChainId(state, action) {
       const { chainId } = action.payload;
       state.chainId = chainId;

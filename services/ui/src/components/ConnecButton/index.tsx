@@ -1,3 +1,5 @@
+import NetworkSelector from "./NetworkSelector";
+
 interface IConnectButtonProps {}
 
 export function ConnectButton(props: IConnectButtonProps) {
