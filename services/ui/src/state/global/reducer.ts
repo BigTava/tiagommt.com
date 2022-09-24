@@ -5,11 +5,11 @@ export interface IApp {
 }
 
 interface IAppState {
-  app: IApp | null;
+  app: IApp;
 }
 
 const initialState: IAppState = {
-  app: null,
+  app: { webType: "" },
 };
 
 export const globalSlice = createSlice({
@@ -19,7 +19,7 @@ export const globalSlice = createSlice({
     resetApp: () => initialState,
 
     updateWebType: (state, action: PayloadAction<string>) => {
-      state.app!.webType = action.payload;
+      state.app.webType = action.payload;
     },
   },
 });
