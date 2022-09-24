@@ -1,15 +1,22 @@
+import React from "react";
+
 import Icon from "../Icon";
+import { useAppSelector } from "../../state/hooks";
 import { CTAUnlock } from "../CTA";
+import { CTAWeb1 } from "../CTA";
+
 import "./styles.css";
 
 export default function Header() {
+  const webType = useAppSelector((state) => state.global.app.webType);
+
   return (
     <header id="home">
       <div className="container header__container">
         <h5>Hello I'm</h5>
         <h1>Tiago Tavares</h1>
         <h5 className="text-light">Blockchain Developer</h5>
-        <CTAUnlock />
+        {webType === "web1" ? <CTAWeb1 /> : <CTAUnlock />}
         <div className="header__socials">
           <Icon type="linkedIn" />
           <Icon type="gitHub" />
