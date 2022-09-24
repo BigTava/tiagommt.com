@@ -1,91 +1,81 @@
-import { FaUserTie } from "react-icons/fa";
-import { HiAcademicCap } from "react-icons/hi";
-import { VscFolderLibrary } from "react-icons/vsc";
-import { BsLinkedin } from "react-icons/bs";
-import { FaGithub } from "react-icons/fa";
-import { AiFillGitlab } from "react-icons/ai";
-import { BsPatchCheckFill } from "react-icons/bs";
-import { BiCheck } from "react-icons/bi";
-import { AiOutlineHome } from "react-icons/ai";
-import { AiOutlineUser } from "react-icons/ai";
-import { BiBook } from "react-icons/bi";
-import { BiMessageSquareDetail } from "react-icons/bi";
-import { MdOutlineEmail } from "react-icons/md";
-import { RiMessengerLine } from "react-icons/ri";
+import { FaUserTie, FaGithub } from 'react-icons/fa'
+import { HiAcademicCap } from 'react-icons/hi'
+import { VscFolderLibrary } from 'react-icons/vsc'
+import { BsLinkedin, BsPatchCheckFill } from 'react-icons/bs'
+import { AiFillGitlab, AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
+import { BiCheck, BiBook, BiMessageSquareDetail } from 'react-icons/bi'
+import { MdOutlineEmail } from 'react-icons/md'
+import { RiMessengerLine } from 'react-icons/ri'
 
-import "./styles.css";
+import './styles.css'
 
 interface IIconProps {
-  type: string;
-  className?: string;
+  type: string
+  className?: string
 }
 
 export default function Icon(props: IIconProps) {
   switch (props.type) {
-    case "tie":
-      return <FaUserTie className={props.className} />;
+    case 'tie':
+      return <FaUserTie className={props.className} />
 
-    case "academic":
-      return <HiAcademicCap className={props.className} />;
+    case 'academic':
+      return <HiAcademicCap className={props.className} />
 
-    case "folder":
-      return <VscFolderLibrary className={props.className} />;
+    case 'folder':
+      return <VscFolderLibrary className={props.className} />
 
-    case "linkedIn":
+    case 'linkedIn':
       return (
-        <a
-          href="https://www.linkedin.com/in/tiagommtavares/"
-          target="_blank"
-          rel="noreferrer"
-        >
+        <a href='https://www.linkedin.com/in/tiagommtavares/' target='_blank' rel='noreferrer'>
           <BsLinkedin />
         </a>
-      );
-    case "gitHub":
+      )
+    case 'gitHub':
       return (
-        <a href="https://github.com/BigTava" target="_blank" rel="noreferrer">
+        <a href='https://github.com/BigTava' target='_blank' rel='noreferrer'>
           <FaGithub />
         </a>
-      );
-    case "gitLab":
+      )
+    case 'gitLab':
       return (
-        <a href="https://gitlab.com/BigTava" target="_blank" rel="noreferrer">
+        <a href='https://gitlab.com/BigTava' target='_blank' rel='noreferrer'>
           <AiFillGitlab />
         </a>
-      );
+      )
 
-    case "scroll_down":
+    case 'scroll_down':
       return (
-        <a href="#contact" className="scroll__down">
+        <a href='#contact' className='scroll__down'>
           Scroll Down
         </a>
-      );
+      )
 
-    case "patchCheck":
-      return <BsPatchCheckFill className={props.className} />;
+    case 'patchCheck':
+      return <BsPatchCheckFill className={props.className} />
 
-    case "check":
-      return <BiCheck className={props.className} />;
+    case 'check':
+      return <BiCheck className={props.className} />
 
-    case "home":
-      return <AiOutlineHome className={props.className} />;
+    case 'home':
+      return <AiOutlineHome className={props.className} />
 
-    case "user":
-      return <AiOutlineUser className={props.className} />;
+    case 'user':
+      return <AiOutlineUser className={props.className} />
 
-    case "book":
-      return <BiBook className={props.className} />;
+    case 'book':
+      return <BiBook className={props.className} />
 
-    case "message":
-      return <BiMessageSquareDetail className={props.className} />;
+    case 'message':
+      return <BiMessageSquareDetail className={props.className} />
 
-    case "email":
-      return <MdOutlineEmail className={props.className} />;
+    case 'email':
+      return <MdOutlineEmail className={props.className} />
 
-    case "messenger":
-      return <RiMessengerLine className={props.className} />;
+    case 'messenger':
+      return <RiMessengerLine className={props.className} />
 
     default:
-      return <></>;
+      return <></>
   }
 }

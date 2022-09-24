@@ -1,11 +1,9 @@
-import NetworkSelector from "./NetworkSelector";
+import NetworkSelector from './NetworkSelector'
 
-interface IConnectButtonProps {}
-
-export function ConnectButton(props: IConnectButtonProps) {
+export function ConnectButton() {
   return (
-    <div className="header-element">
+    <div className='header-element'>
       <NetworkSelector />
     </div>
-  );
+  )
 }

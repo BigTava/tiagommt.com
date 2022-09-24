@@ -1,72 +1,72 @@
 const data = {
   frontend: [
     {
-      skill: "HTML, CSS, JS",
-      level: "Experienced",
+      skill: 'HTML, CSS, JS',
+      level: 'Experienced',
     },
     {
-      skill: "Typescript",
-      level: "Experienced",
+      skill: 'Typescript',
+      level: 'Experienced',
     },
     {
-      skill: "React",
-      level: "Experienced",
+      skill: 'React',
+      level: 'Experienced',
     },
     {
-      skill: "Redux",
-      level: "Experienced",
+      skill: 'Redux',
+      level: 'Experienced',
     },
   ],
   backend: [
     {
-      skill: "Python",
-      level: "Experienced",
+      skill: 'Python',
+      level: 'Experienced',
     },
     {
-      skill: "FastAPI, Flask",
-      level: "Experienced",
+      skill: 'FastAPI, Flask',
+      level: 'Experienced',
     },
     {
-      skill: "NodeJS",
-      level: "Intermediate",
+      skill: 'NodeJS',
+      level: 'Intermediate',
     },
     {
-      skill: "ExpressJS",
-      level: "Intermediate",
+      skill: 'ExpressJS',
+      level: 'Intermediate',
     },
   ],
   blockchain: [
     {
-      skill: "Solidity",
-      level: "Experienced",
+      skill: 'Solidity',
+      level: 'Experienced',
     },
     {
-      skill: "Rust",
-      level: "Beginner",
+      skill: 'Rust',
+      level: 'Beginner',
     },
     {
-      skill: "Hardhat",
-      level: "Experienced",
+      skill: 'Hardhat',
+      level: 'Experienced',
     },
     {
-      skill: "Truffle",
-      level: "Intermediate",
+      skill: 'Truffle',
+      level: 'Intermediate',
     },
     {
-      skill: "Brownie",
-      level: "Beginner",
+      skill: 'Brownie',
+      level: 'Beginner',
     },
   ],
   analytics: [
     {
-      skill: "Python",
-      level: "Experienced",
+      skill: 'Python',
+      level: 'Experienced',
     },
     {
-      skill: "R",
-      level: "Intermediate",
+      skill: 'R',
+      level: 'Intermediate',
     },
   ],
-};
+}
 
-export default data;
+export default data

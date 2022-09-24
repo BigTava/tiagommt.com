@@ -1,38 +1,33 @@
-import { Connector } from "@web3-react/types";
-import { ConnectionType, injectedConnection } from "./index";
+import { Connector } from '@web3-react/types'
+import { ConnectionType, injectedConnection } from './index'
 
 export function getIsInjected(): boolean {
-  return Boolean(window.ethereum);
+  return Boolean(window.ethereum)
 }
 
 export function getIsMetaMask(): boolean {
-  return window.ethereum?.isMetaMask ?? false;
+  return window.ethereum?.isMetaMask ?? false
 }
 
-const CONNECTIONS = [injectedConnection];
+const CONNECTIONS = [injectedConnection]
 export function getConnection(c: Connector | ConnectionType) {
   if (c instanceof Connector) {
-    const connection = CONNECTIONS.find(
-      (connection) => connection.connector === c
-    );
+    const connection = CONNECTIONS.find((connection) => connection.connector === c)
     if (!connection) {
-      throw Error("unsupported connector");
+      throw Error('unsupported connector')
     }
-    return connection;
+    return connection
   } else {
     switch (c) {
       case ConnectionType.INJECTED:
-        return injectedConnection;
+        return injectedConnection
     }
   }
 }
 
-export function getConnectionName(
-  connectionType: ConnectionType,
-  isMetaMask?: boolean
-) {
+export function getConnectionName(connectionType: ConnectionType, isMetaMask?: boolean) {
   switch (connectionType) {
     case ConnectionType.INJECTED:
-      return isMetaMask ? "MetaMask" : "Injected";
+      return isMetaMask ? 'MetaMask' : 'Injected'
   }
 }

@@ -1,34 +1,34 @@
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from 'react'
 
-import "./styles.css";
+import './styles.css'
 
 interface IButtonProps {
-  href?: string;
-  label: string;
-  download?: boolean;
-  onClick?: MouseEventHandler<HTMLAnchorElement> | undefined;
+  href?: string
+  label: string
+  download?: boolean
+  onClick?: MouseEventHandler<HTMLAnchorElement> | undefined
 }
 
 export function ButtonDefault(props: IButtonProps) {
   return (
-    <a href={props.href} className="btn" onClick={props.onClick}>
+    <a href={props.href} className='btn' onClick={props.onClick}>
       {props.label}
     </a>
-  );
+  )
 }
 
 export function ButtonPrimary(props: IButtonProps) {
   return (
-    <a href={props.href} className="btn btn-primary">
+    <a href={props.href} className='btn btn-primary'>
       {props.label}
     </a>
-  );
+  )
 }
 
 export function ButtonDonwload(props: IButtonProps) {
   return (
-    <a href={props.href} className="btn" download>
+    <a href={props.href} className='btn' download>
       {props.label}
     </a>
-  );
+  )
 }

@@ -1,27 +1,22 @@
-import React from "react";
-import styled from "styled-components/macro";
-import { useWeb3React } from "@web3-react/core";
-import { darken } from "polished";
+import React from 'react'
+import styled from 'styled-components/macro'
+import { useWeb3React } from '@web3-react/core'
+import { darken } from 'polished'
 
-import useSyncChainQuery from "../../hooks/useSyncChainQuery";
-import useSelectChain from "../../hooks/useSelectChain";
-import {
-  useModalIsOpen,
-  useOpenModal,
-  useCloseModal,
-  useToggleModal,
-} from "../../state/web3/hooks";
-import { MEDIA_WIDTHS } from "../../theme";
-import { isMobile } from "../../utils/userAgent";
-import { getChainInfo } from "../../constants/chainsInfo";
-import { Web3Modal } from "../../state/web3/reducer";
-import "./styles.css";
+import useSyncChainQuery from '../../hooks/useSyncChainQuery'
+import useSelectChain from '../../hooks/useSelectChain'
+import { useModalIsOpen, useOpenModal, useCloseModal, useToggleModal } from '../../state/web3/hooks'
+import { MEDIA_WIDTHS } from '../../theme'
+import { isMobile } from '../../utils/userAgent'
+import { getChainInfo } from '../../constants/chainsInfo'
+import { Web3Modal } from '../../state/web3/reducer'
+import './styles.css'
 
 const SelectorWrapper = styled.div`
   @media screen and (min-width: ${MEDIA_WIDTHS.deprecated_upToSmall}px) {
     position: relative;
   }
-`;
+`
 
 const SelectorControls = styled.div<{ supportedChain: boolean }>`
   align-items: center;
@@ -44,27 +39,27 @@ const SelectorControls = styled.div<{ supportedChain: boolean }>`
   :focus {
     background-color: ${({ theme }) => darken(0.1, theme.deprecated_red1)};
   }
-`;
+`
 
 export default function NetworkSelector() {
-  const { chainId, provider } = useWeb3React();
+  const { chainId, provider } = useWeb3React()
 
-  const node = React.useRef<HTMLDivElement>(null);
-  const isOpen = useModalIsOpen(Web3Modal.NETWORK_SELECTOR);
-  const openModal = useOpenModal(Web3Modal.NETWORK_SELECTOR);
-  const closeModal = useCloseModal(Web3Modal.NETWORK_SELECTOR);
-  const toggleModal = useToggleModal(Web3Modal.NETWORK_SELECTOR);
+  const node = React.useRef<HTMLDivElement>(null)
+  const isOpen = useModalIsOpen(Web3Modal.NETWORK_SELECTOR)
+  const openModal = useOpenModal(Web3Modal.NETWORK_SELECTOR)
+  const closeModal = useCloseModal(Web3Modal.NETWORK_SELECTOR)
+  const toggleModal = useToggleModal(Web3Modal.NETWORK_SELECTOR)
 
-  const info = getChainInfo(chainId);
+  const info = getChainInfo(chainId)
 
-  const selectChain = useSelectChain();
-  useSyncChainQuery();
+  const selectChain = useSelectChain()
+  useSyncChainQuery()
 
   if (!chainId || !provider) {
-    return null;
+    return null
   }
 
-  const onSupportedChain = info !== undefined;
+  const onSupportedChain = info !== undefined
 
   return (
     <SelectorWrapper
@@ -75,5 +70,5 @@ export default function NetworkSelector() {
     >
       <SelectorControls supportedChain={onSupportedChain}></SelectorControls>
     </SelectorWrapper>
-  );
+  )
 }

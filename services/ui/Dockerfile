@@ -6,7 +6,7 @@ RUN mkdir -p /app/ui
 WORKDIR /app/ui
 
 # add `/usr/src/app/node_modules/.bin` to $PATH
-ENV PATH /app/ui-core/node_modules/.bin:$PATH
+ENV PATH /app/ui/node_modules/.bin:$PATH
 
 # install and cache app dependencies
 COPY package.json .

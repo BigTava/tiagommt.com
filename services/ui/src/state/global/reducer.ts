@@ -1,29 +1,29 @@
-import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 export interface IApp {
-  webType: string;
+  webType: string
 }
 
 interface IAppState {
-  app: IApp;
+  app: IApp
 }
 
 const initialState: IAppState = {
-  app: { webType: "" },
-};
+  app: { webType: '' },
+}
 
 export const globalSlice = createSlice({
-  name: "globalSlice",
+  name: 'globalSlice',
   initialState,
   reducers: {
     resetApp: () => initialState,
 
     updateWebType: (state, action: PayloadAction<string>) => {
-      state.app.webType = action.payload;
+      state.app.webType = action.payload
     },
   },
-});
+})
 
-export const { resetApp, updateWebType } = globalSlice.actions;
+export const { resetApp, updateWebType } = globalSlice.actions
 
-export default globalSlice.reducer;
+export default globalSlice.reducer

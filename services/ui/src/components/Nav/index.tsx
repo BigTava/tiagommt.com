@@ -1,62 +1,60 @@
-import React from "react";
+import React from 'react'
 
-import { useAppSelector } from "../../state/hooks";
-import Icon from "../Icon";
-import "./styles.css";
+import { useAppSelector } from '../../state/hooks'
+import Icon from '../Icon'
+import './styles.css'
 
-interface INavProps {}
+export default function Nav() {
+  const [activeNav, setActiveNav] = React.useState('#home')
 
-export default function Nav(props: INavProps) {
-  const [activeNav, setActiveNav] = React.useState("#home");
-
-  const webType = useAppSelector((state) => state.global.app.webType);
+  const webType = useAppSelector((state) => state.global.app.webType)
 
   switch (webType) {
-    case "web1":
+    case 'web1':
       return (
         <nav>
           <a
-            href="#home"
-            onClick={() => setActiveNav("#home")}
-            className={activeNav === "#home" ? "active" : ""}
+            href='#home'
+            onClick={() => setActiveNav('#home')}
+            className={activeNav === '#home' ? 'active' : ''}
           >
-            <Icon type="home" />
+            <Icon type='home' />
           </a>
           <a
-            href="#about"
-            onClick={() => setActiveNav("#about")}
-            className={activeNav === "#about" ? "active" : ""}
+            href='#about'
+            onClick={() => setActiveNav('#about')}
+            className={activeNav === '#about' ? 'active' : ''}
           >
-            <Icon type="user" />
+            <Icon type='user' />
           </a>
           <a
-            href="#experience"
-            onClick={() => setActiveNav("#experience")}
-            className={activeNav === "#experience" ? "active" : ""}
+            href='#experience'
+            onClick={() => setActiveNav('#experience')}
+            className={activeNav === '#experience' ? 'active' : ''}
           >
-            <Icon type="book" />
+            <Icon type='book' />
           </a>
           <a
-            href="#contact"
-            onClick={() => setActiveNav("#contact")}
-            className={activeNav === "#contact" ? "active" : ""}
+            href='#contact'
+            onClick={() => setActiveNav('#contact')}
+            className={activeNav === '#contact' ? 'active' : ''}
           >
-            <Icon type="message" />
+            <Icon type='message' />
           </a>
         </nav>
-      );
+      )
 
     default:
       return (
         <nav>
           <a
-            href="#home"
-            onClick={() => setActiveNav("#home")}
-            className={activeNav === "#home" ? "active" : ""}
+            href='#home'
+            onClick={() => setActiveNav('#home')}
+            className={activeNav === '#home' ? 'active' : ''}
           >
-            <Icon type="home" />
+            <Icon type='home' />
           </a>
         </nav>
-      );
+      )
   }
 }

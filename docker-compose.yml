@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  ui-core:
+  ui:
     stdin_open: true
     build:
       context: ./services/ui
@@ -14,5 +14,3 @@ services:
       - 3007:3000
     environment:
       - NODE_ENV=development
-      - REACT_APP_API_SERVICE_URL=${REACT_APP_API_SERVICE_URL}
-    depends_on:

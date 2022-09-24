@@ -1,34 +1,33 @@
-import React from "react";
+import React from 'react'
 
-import Icon from "../Icon";
-import { useAppSelector } from "../../state/hooks";
-import { CTAUnlock } from "../CTA";
-import { CTAWeb1 } from "../CTA";
+import Icon from '../Icon'
+import { useAppSelector } from '../../state/hooks'
+import { CTAUnlock, CTAWeb1 } from '../CTA'
 
-import "./styles.css";
+import './styles.css'
 
 export default function Header() {
-  const webType = useAppSelector((state) => state.global.app.webType);
+  const webType = useAppSelector((state) => state.global.app.webType)
 
   return (
-    <header id="home">
-      <div className="container header__container">
-        <h5>Hello I'm</h5>
+    <header id='home'>
+      <div className='container header__container'>
+        <h5>Hello I&apos;m</h5>
         <h1>Tiago Tavares</h1>
-        <h5 className="text-light">Blockchain Developer</h5>
-        {webType === "web1" ? <CTAWeb1 /> : <CTAUnlock />}
-        <div className="header__socials">
-          <Icon type="linkedIn" />
-          <Icon type="gitHub" />
-          <Icon type="gitLab" />
+        <h5 className='text-light'>Blockchain Developer</h5>
+        {webType === 'web1' ? <CTAWeb1 /> : <CTAUnlock />}
+        <div className='header__socials'>
+          <Icon type='linkedIn' />
+          <Icon type='gitHub' />
+          <Icon type='gitLab' />
         </div>
-        <div className="me">
-          <img src={""} alt={"Tiago Tavares"} />
+        <div className='me'>
+          <img src={''} alt={'Tiago Tavares'} />
         </div>
       </div>
-      <a href="#contact" className="scroll__down">
+      <a href='#contact' className='scroll__down'>
         Scroll Down
       </a>
     </header>
-  );
+  )
 }

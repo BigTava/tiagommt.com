@@ -1,8 +1,10 @@
-import { Main } from "./pages/Main";
-import "./theme/variables.css";
+import React from 'react'
+
+import { Main } from './pages/Main'
+import './theme/variables.css'
 
 const App = () => {
-  return <Main />;
-};
+  return <Main />
+}
 
-export default App;
+export default App
