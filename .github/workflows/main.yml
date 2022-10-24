@@ -27,7 +27,7 @@ jobs:
             --cache-from ${{ env.IMAGE }}:latest \
             --tag ${{ env.IMAGE }}:latest \
             --file ./services/nginx/Dockerfile.deploy \
-            "./"
+            "./services/nginx"
       - name: Push image
         run: |
           docker push ${{ env.IMAGE }}:latest
