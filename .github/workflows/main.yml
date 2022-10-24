@@ -25,7 +25,7 @@ jobs:
         run: |
           docker build \
             --cache-from ${{ env.IMAGE }}:latest \
-            --tag ${{ env.HEROKU_REGISTRY_IMAGE }}:latest \
+            --tag ${{ env.IMAGE }}:latest \
             --file ./services/nginx/Dockerfile.deploy \
             "./services"
       - name: Push image
