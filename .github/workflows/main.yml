@@ -22,13 +22,12 @@ jobs:
         run: |
           docker pull ${{ env.IMAGE }}:latest || true
       - name: Build image
-        uses: docker/build-push-action@v3
-        with:
-          context: ./services
-          file: ./services/nginx/Dockerfile.deploy
-          builder: ${{ steps.buildx.outputs.name }}
-          cache-from: ${{ env.IMAGE }}:latest
-          tags: ${{ env.HEROKU_REGISTRY_IMAGE }}:latest
+        run: |
+          docker build \
+            --cache-from ${{ env.IMAGE }}:latest \
+            --tag ${{ env.HEROKU_REGISTRY_IMAGE }}:latest \
+            --file ./services/nginx/Dockerfile.deploy \
+            "./services"
       - name: Push image
         run: |
           docker push ${{ env.IMAGE }}:latest
