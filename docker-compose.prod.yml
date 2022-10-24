@@ -1,0 +1,18 @@
+version: "3.8"
+
+services:
+  nginx:
+    build:
+      context: ./services
+      dockerfile: ./nginx/Dockerfile.deploy
+    container_name: nginx
+    ports:
+      - 1337:80
+    depends_on:
+      - ui
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
