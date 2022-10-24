@@ -13,6 +13,11 @@
   position: relative;
 }
 
+.header__container h1 a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .header__socials {
   display: flex;
   flex-direction: column;

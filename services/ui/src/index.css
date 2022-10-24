@@ -38,9 +38,10 @@ body {
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
-  background-image: url(../src/assets/bg-texture.jpg);
-  background-repeat: repeat-y;
-  background-size: cover;
+  background-color: #00031f;
+  background-image: url(../src/assets/images/asfalt-light.png);
+  background-repeat: repeat;
+  background-size: auto;
 }
 
 /* ================ GENERAL STYLES ================ */

@@ -1,19 +1,23 @@
 import React from 'react'
 
 import Icon from '../Icon'
-import { useAppSelector } from '../../state/hooks'
+import { useAppSelector, useAppDispatch } from '../../state/hooks'
+import { updateWebType } from '../../state/global/reducer'
 import { CTAUnlock, CTAWeb1 } from '../CTA'
 
 import './styles.css'
 
 export default function Header() {
   const webType = useAppSelector((state) => state.global.app.webType)
+  const dispatch = useAppDispatch()
 
   return (
     <header id='home'>
       <div className='container header__container'>
         <h5>Hello I&apos;m</h5>
-        <h1>Tiago Tavares</h1>
+        <h1>
+          <a onClick={() => dispatch(updateWebType('unlock'))}>Tiago Tavares</a>
+        </h1>
         <h5 className='text-light'>Blockchain Developer</h5>
         {webType === 'web1' ? <CTAWeb1 /> : <CTAUnlock />}
         <div className='header__socials'>
