@@ -8,8 +8,6 @@ services:
     container_name: nginx
     ports:
       - 1337:80
-    depends_on:
-      - ui
     networks:
       - default
 
