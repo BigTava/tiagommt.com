@@ -19,7 +19,7 @@ export function ButtonDefault(props: IButtonProps) {
 
 export function ButtonPrimary(props: IButtonProps) {
   return (
-    <a href={props.href} className='btn btn-primary'>
+    <a href={props.href} className='btn btn-primary' onClick={props.onClick}>
       {props.label}
     </a>
   )

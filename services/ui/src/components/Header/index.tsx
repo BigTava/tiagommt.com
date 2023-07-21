@@ -3,13 +3,24 @@ import React from 'react'
 import Icon from '../Icon'
 import { useAppSelector, useAppDispatch } from '../../state/hooks'
 import { updateWebType } from '../../state/global/reducer'
-import { CTAUnlock, CTAWeb1 } from '../CTA'
+import { CTAUnlock, CTAWeb1, CTAWeb2, CTAWeb3 } from '../CTA'
 
 import './styles.css'
 
 export default function Header() {
   const webType = useAppSelector((state) => state.global.app.webType)
   const dispatch = useAppDispatch()
+  console.log(webType)
+  let cta
+  if (webType === 'web1') {
+    cta = <CTAWeb1 />
+  } else if (webType === 'web2') {
+    cta = <CTAWeb2 />
+  } else if (webType === 'web3') {
+    cta = <CTAWeb3 />
+  } else {
+    cta = <CTAUnlock />
+  }
 
   return (
     <header id='home'>
@@ -19,7 +30,7 @@ export default function Header() {
           <a onClick={() => dispatch(updateWebType('unlock'))}>Tiago Tavares</a>
         </h1>
         <h5 className='text-light'>Blockchain Developer</h5>
-        {webType === 'web1' ? <CTAWeb1 /> : <CTAUnlock />}
+        {cta}
         <div className='header__socials'>
           <Icon type='linkedIn' />
           <Icon type='gitHub' />

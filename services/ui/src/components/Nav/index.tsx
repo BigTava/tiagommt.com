@@ -45,16 +45,6 @@ export default function Nav() {
       )
 
     default:
-      return (
-        <nav>
-          <a
-            href='#home'
-            onClick={() => setActiveNav('#home')}
-            className={activeNav === '#home' ? 'active' : ''}
-          >
-            <Icon type='home' />
-          </a>
-        </nav>
-      )
+      return <></>
   }
 }

@@ -1,9 +1,9 @@
-import NetworkSelector from './NetworkSelector'
+import { ChainSelector } from './ChainSelector'
 
 export function ConnectButton() {
   return (
     <div className='header-element'>
-      <NetworkSelector />
+      <ChainSelector />
     </div>
   )
 }
