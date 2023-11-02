@@ -1,12 +1,10 @@
 // Core
 import { createRoot } from 'react-dom/client'
+import App from './App'
 
 // Redux
 import { Provider } from 'react-redux'
 import { store } from 'state/store'
-
-// Application
-import App from './App'
 
 // Styles
 import './index.css'
