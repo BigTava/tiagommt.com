@@ -1,7 +1,8 @@
-import React from 'react'
+// Pages
+import { Main } from 'pages/Main'
 
-import { Main } from './pages/Main'
-import './theme/variables.css'
+// Styles
+import 'theme/variables.css'
 
 const App = () => {
   return <Main />

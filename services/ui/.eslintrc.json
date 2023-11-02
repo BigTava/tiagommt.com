@@ -23,12 +23,16 @@
     "spaced-comment": "error",
     "quotes": ["error", "single"],
     "no-duplicate-imports": "error",
-    "no-unused-vars": 0
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ]
   },
   "settings": {
     "react": { "version": "detect" },
     "import/resolver": {
-      "typescript": {}
+      "typescript": {},
+      "node": { "paths": ["src"] }
     }
   }
 }

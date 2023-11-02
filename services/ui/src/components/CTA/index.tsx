@@ -1,11 +1,17 @@
-import { useAppDispatch } from '../../state/hooks'
+// Components
+import { ButtonDefault, ButtonPrimary, ButtonDonwload } from 'components/Button'
 
-import cv from '../../assets/docs/CV_Tiago_Tavares.pdf'
-import { updateWebType } from '../../state/global/reducer'
-import { ButtonDefault, ButtonPrimary, ButtonDonwload } from '../Button'
+// Redux
+import { useAppDispatch } from 'state/hooks'
+import { updateWebType } from 'state/global/reducer'
+
+// Assets
+import cv from 'assets/docs/CV_Tiago_Tavares.pdf'
+
+// Styles
 import './styles.css'
 
-export function CTAUnlock() {
+export function CTADefault() {
   const dispatch = useAppDispatch()
   const changeWebType = (webType: string) => {
     dispatch(updateWebType(webType))
@@ -13,9 +19,9 @@ export function CTAUnlock() {
 
   return (
     <div className='cta'>
-      <ButtonDefault label='Unlock Web1' onClick={() => changeWebType('web1')} />
-      <ButtonDefault label='Unlock Web2' onClick={() => changeWebType('web2')} />
-      <ButtonPrimary label='Unlock Web3' onClick={() => changeWebType('web3')} />
+      <ButtonDefault label='WEB 1' onClick={() => changeWebType('WEB1')} />
+      <ButtonDefault label='WEB 2' onClick={() => changeWebType('WEB2')} />
+      <ButtonPrimary label='WEB 3' onClick={() => changeWebType('WEB3')} />
     </div>
   )
 }
@@ -32,14 +38,13 @@ export function CTAWeb1() {
 export function CTAWeb2() {
   return (
     <div className='cta'>
-      <ButtonDonwload href={cv} label='Get CV' />
+      <ButtonDonwload href={cv} label='GET CV' />
       <ButtonPrimary href='' label='Meet me' />
     </div>
   )
 }
 
 export function CTAWeb3() {
-  
   return (
     <div className='cta'>
       <ButtonDonwload href={cv} label='Mint CV' />

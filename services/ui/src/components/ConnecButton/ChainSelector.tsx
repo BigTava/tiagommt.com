@@ -12,11 +12,10 @@ export const ChainSelector = ({ leftAlign }: ChainSelectorProps) => {
 
   const ref = useRef<HTMLDivElement>(null)
   const modalRef = useRef<HTMLDivElement>(null)
-  useOnClickOutside(ref, () => setIsOpen(false), [modalRef])
 
   if (!chainId) {
     return null
   }
 
-  return <Box position='relative' ref={ref}></Box>
+  return <></>
 }
