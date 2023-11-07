@@ -28,11 +28,11 @@ export default function Header() {
       <div className='container header__container'>
         <h5>Hello I&apos;m</h5>
         <h1>
-          <a onClick={() => dispatch(updateWebType('unlock'))}>Tiago Tavares</a>
+          <a onClick={() => dispatch(updateWebType(''))}>Tiago Tavares</a>
         </h1>
         <h5 className='text-light'>Blockchain Developer</h5>
         <div className='header__cta'>
-          <h5>Please choose...</h5>
+          <h5>Pleese Choose...</h5>
           {CTA[webType as WebType]}
         </div>
 
@@ -44,10 +44,11 @@ export default function Header() {
         <div className='me'>
           <img src={me} alt='Tiago Tavares' />
         </div>
+
+        <a href='#contact' className='scroll__down'>
+          Scroll Down
+        </a>
       </div>
-      <a href='#contact' className='scroll__down'>
-        Scroll Down
-      </a>
     </header>
   )
 }

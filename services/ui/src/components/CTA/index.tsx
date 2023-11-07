@@ -30,7 +30,7 @@ export function CTAWeb1() {
   return (
     <div className='cta'>
       <ButtonDonwload href={cv} label='Download CV' />
-      <ButtonPrimary href='' label='Meet me' />
+      <ButtonPrimary href='about' label='Meet me' />
     </div>
   )
 }
@@ -39,7 +39,7 @@ export function CTAWeb2() {
   return (
     <div className='cta'>
       <ButtonDonwload href={cv} label='GET CV' />
-      <ButtonPrimary href='' label='Meet me' />
+      <ButtonPrimary href='about' label='Meet me' />
     </div>
   )
 }
@@ -48,7 +48,7 @@ export function CTAWeb3() {
   return (
     <div className='cta'>
       <ButtonDonwload href={cv} label='Mint CV' />
-      <ButtonPrimary href='' label='Meet me' />
+      <ButtonPrimary href='about' label='Meet me' />
     </div>
   )
 }

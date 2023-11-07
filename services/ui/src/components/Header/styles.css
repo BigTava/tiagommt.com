@@ -1,17 +1,7 @@
-.scroll__down {
-  position: absolute;
-  right: 2.3rem;
-  bottom: 5rem;
-  transform: rotate(90deg);
-  font-weight: 300;
-  font-size: 0.9rem;
-}
-
-.header__cta {
-  margin-top: 2.5rem;
-  gap: 1rem;
-  display: flex;
-  flex-direction: column;
+header {
+  height: 100vh;
+  padding-top: 7rem;
+  overflow: hidden;
 }
 
 .header__container {
@@ -20,11 +10,19 @@
   position: relative;
 }
 
-.header__container h1 a {
+.header__container h1 {
   cursor: pointer;
-  text-decoration: none;
 }
 
+.header__cta {
+  margin-top: 2.5rem;
+}
+
+.header__cta h5 {
+  margin-bottom: 1.2rem;
+}
+
+/* =============== HEADER SOCIALS ============== */
 .header__socials {
   display: flex;
   flex-direction: column;
@@ -32,23 +30,90 @@
   gap: 0.8rem;
   position: absolute;
   left: 0;
-  bottom: 3rem;
+  bottom: 5rem;
 }
 
 .header__socials::after {
   content: '';
   width: 1px;
-  height: 2rem;
   background: var(--color-primary);
+  animation: growAndFade 3s infinite;
+  position: absolute;
+  bottom: -3rem;
 }
 
-/* ================ MEDIA QUERIES (MEDIUM DEVICES) ================ */
+@keyframes growAndFade {
+  0% {
+    height: 0;
+    opacity: 0;
+  }
+  50% {
+    height: 2rem;
+    opacity: 1;
+  }
+  100% {
+    height: 0;
+    opacity: 0;
+  }
+}
+
+/* =============== ME ============== */
+.me {
+  background: linear-gradient(var(--color-primary), transparent);
+  width: 22rem;
+  height: 30rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4rem;
+  border-radius: 12rem 12rem 0 0;
+  overflow: hidden;
+  padding: 5rem 1.5rem 1.5rem 1.5rem;
+}
+
+.me img {
+  height: 22rem;
+}
+
+/* =============== SCROLL DOWN ============== */
+.scroll__down {
+  position: absolute;
+  right: -2.3rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* ================ MEDIA QUERIES (MEDIUM DEVICES) ================= */
 @media screen and (max-width: 1024px) {
+  header {
+    height: 68vh;
+  }
 }
 
-/* ================ MEDIA QUERIES (SMALL DEVICES) ================ */
+/* ================ MEDIA QUERIES (SMALL DEVICES) ================= */
 @media screen and (max-width: 600px) {
-  .header__socials {
+  header {
+    height: 100vh;
+    /* added after tutorial */
+    padding-top: 4rem;
+  }
+
+  .header__socials,
+  .scroll__down {
     display: none;
+  }
+
+  .me {
+    width: 94%;
+    max-width: 20rem;
+    margin-top: 2.5rem;
+    justify-content: center;
+  }
+
+  .cta {
+    margin-top: 1.7rem;
+    gap: 1rem;
   }
 }

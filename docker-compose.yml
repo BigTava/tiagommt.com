@@ -1,17 +1,16 @@
 version: "3.8"
 
 services:
-  ui:
-    stdin_open: true
+  nginx:
     build:
-      context: ./services/ui
-      dockerfile: Dockerfile
-    container_name: ui
-    volumes:
-      - ./services/ui:/app/ui
-      - /app/ui/node_modules
+      context: ./services
+      dockerfile: ./nginx/Dockerfile.deploy
+    container_name: nginx
     ports:
-      - 3007:3000
-    environment:
-      - NODE_ENV=development
-      - WDS_SOCKET_PORT=0
+      - 1337:80
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge

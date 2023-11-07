@@ -1,3 +1,9 @@
+.header_cta div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2.5rem;
+}
+
 .cta {
   display: flex;
   gap: 1.2rem;
