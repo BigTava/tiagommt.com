@@ -49,6 +49,8 @@
   color: var(--color-primary);
   font-size: 1.4rem;
   margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .about__card h5 {

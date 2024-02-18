@@ -1,9 +1,13 @@
 // Components
 import { ButtonDefault, ButtonPrimary, ButtonDonwload } from 'components/Button'
+import Select from 'components/Fields/Select'
 
 // Redux
 import { useAppDispatch } from 'state/hooks'
 import { updateWebType } from 'state/global/reducer'
+
+// Utils
+import { CHAINS } from 'utils/constants/chains'
 
 // Assets
 import cv from 'assets/docs/CV_Tiago_Tavares.pdf'
@@ -38,6 +42,10 @@ export function CTAWeb1() {
 export function CTAWeb2() {
   return (
     <div className='cta'>
+      <Select
+        options={CHAINS}
+        className='h-14 text-primary hover:text-bg hover:bg-white ring-1 ring-inset ring-primary hover:outline-none hover:ring-white hover:cursor-pointer transition-all duration-400 ease-in-out'
+      />
       <ButtonDonwload href={cv} label='GET CV' />
       <ButtonPrimary href='about' label='Meet me' />
     </div>

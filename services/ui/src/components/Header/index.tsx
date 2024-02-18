@@ -32,7 +32,7 @@ export default function Header() {
         </h1>
         <h5 className='text-light'>Blockchain Developer</h5>
         <div className='header__cta'>
-          <h5>Pleese Choose...</h5>
+          {webType === '' ? <h5>Pleese Choose...</h5> : <h5>Wise Choice!</h5>}
           {CTA[webType as WebType]}
         </div>
 
