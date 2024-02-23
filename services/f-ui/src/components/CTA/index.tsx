@@ -7,7 +7,7 @@ import { useAppDispatch } from 'state/hooks'
 import { updateWebType } from 'state/global/reducer'
 
 // Utils
-import { CHAINS } from 'utils/constants/chains'
+import { REST_FRAMEWORKS } from 'utils/constants/rest-frameworks'
 
 // Assets
 import cv from 'assets/docs/CV_Tiago_Tavares.pdf'
@@ -43,7 +43,7 @@ export function CTAWeb2() {
   return (
     <div className='cta'>
       <Select
-        options={CHAINS}
+        options={REST_FRAMEWORKS}
         className='h-14 text-primary hover:text-bg hover:bg-white ring-1 ring-inset ring-primary hover:outline-none hover:ring-white hover:cursor-pointer transition-all duration-400 ease-in-out'
       />
       <ButtonDonwload href={cv} label='GET CV' />

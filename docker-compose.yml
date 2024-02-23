@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  nginx:
+  b-nginx:
     build:
       context: ./services
       dockerfile: ./nginx/Dockerfile.deploy

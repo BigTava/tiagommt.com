@@ -44,9 +44,10 @@ export default function About() {
           </div>
 
           <p>
-            ⛏ Currently leading the development and production launch of a Renewable Energy
-            Community management platform. <br /> 👨‍🔧 A multi-role and flexible person extensively
-            involved in web3 innovation, particularly in the energy sector.
+            ⛏ Currently building the next generation energy markets.
+            <br />
+            👨‍🔧 A multi-role and flexible person extensively involved in web3 innovation,
+            particularly in the energy sector.
           </p>
 
           <a

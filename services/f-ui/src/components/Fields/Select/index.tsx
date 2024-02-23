@@ -39,7 +39,12 @@ export default function Select(props: SelectProps) {
               className={`relative w-40 cursor-default rounded-md py-1.5 pl-3 pr-10 text-left shadow-sm  sm:text-sm sm:leading-6 ${props.className}`}
             >
               <span className='flex items-center'>
-                <img src={selected.avatar} alt='' className='h-5 w-5 object-fill rounded-full' />
+                <img
+                  src={selected.avatar}
+                  style={{ color: 'white' }}
+                  alt=''
+                  className='h-5 w-5 object-fill rounded-full'
+                />
                 <span className='ml-3 block truncate'>{selected.name}</span>
               </span>
 

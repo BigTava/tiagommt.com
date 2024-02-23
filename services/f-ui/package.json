@@ -3,18 +3,15 @@
   "homepage": "http://tiagommt.com",
   "version": "0.1.0",
   "private": true,
-  "devDependencies": {
-    "@types/jest": "^27.5.2",
-    "@types/node": "^16.11.47",
-    "@types/react": "^18.0.15",
-    "@types/react-dom": "^18.0.6",
-    "@typescript-eslint/eslint-plugin": "^5.38.0",
-    "@typescript-eslint/parser": "^5.38.0",
-    "eslint": "^8.24.0",
-    "eslint-plugin-react": "^7.31.8",
-    "prettier": "^2.7.1",
-    "tailwindcss": "^3.3.5",
-    "typescript": "^4.8.3"
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json} --quiet",
+    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}' --quiet",
+    "prettier:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "prettier:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.17",
@@ -48,15 +45,18 @@
     "ua-parser-js": "^0.7.28",
     "web-vitals": "^2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "lint": "eslint src/**/*.{js,jsx,ts,tsx,json} --quiet",
-    "lint:fix": "eslint --fix 'src/**/*.{js,jsx,ts,tsx,json}' --quiet",
-    "prettier:check": "prettier --check 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "prettier:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+  "devDependencies": {
+    "@types/jest": "^27.5.2",
+    "@types/node": "^16.11.47",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
+    "@typescript-eslint/eslint-plugin": "^5.38.0",
+    "@typescript-eslint/parser": "^5.38.0",
+    "eslint": "^8.24.0",
+    "eslint-plugin-react": "^7.31.8",
+    "prettier": "^2.7.1",
+    "tailwindcss": "^3.3.5",
+    "typescript": "^4.8.3"
   },
   "eslintConfig": {
     "extends": [
