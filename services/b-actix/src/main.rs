@@ -1,15 +1,22 @@
-use actix_web::{get, post, web, App, HttpResponse, HttpServer, Responder};
+use std::net::TcpListener;
 
-#[get("/")]
-async fn hello() -> impl Responder {
-    HttpResponse::Ok().body("Hello world!")
-}
+use anyhow::{Error, Result};
 
-#[post("/echo")]
-async fn echo(req_body: String) -> impl Responder {
-    HttpResponse::Ok().body(req_body)
-}
+use b_actix::startup::run;
+use b_actix::configuration::get_configuration;
 
-async fn manual_hello() -> impl Responder {
-    HttpResponse::Ok().body("Hey there!")
+#[tokio::main]
+async fn main() -> Result<(), anyhow::Error> {
+    dotenv::dotenv().ok();
+    let configuration = get_configuration().expect("Failed to load configuration");
+
+    let address = format!(
+        "{}:{}",
+        configuration.application_host, configuration.application_port
+    );
+    let listener = TcpListener::bind(address).expect("Failed to bind");
+    match run(listener)?.await {
+        Ok(_) => Ok(()),
+        Err(e) => Err(Error::from(e)),
+    }
 }
