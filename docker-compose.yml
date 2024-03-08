@@ -1,13 +1,23 @@
 version: "3.8"
 
 services:
-  b-nginx:
+  b-actix:
     build:
-      context: ./services
-      dockerfile: ./nginx/Dockerfile.deploy
-    container_name: nginx
+      context: ./
+      dockerfile: ./services/nginx/Dockerfile
+
+  f-main:
+    build:
+      context: ./services/f-main
+      dockerfile: ./services/f-main/Dockerfile.deploy
+    container_name: f-core
+    volumes:
+      - ./services/f-core:/app
+      - /app/node_modules
     ports:
-      - 1337:80
+      - "3000:3000"
+    depends_on:
+      - b-core
     networks:
       - default
 
