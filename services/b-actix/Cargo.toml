@@ -4,6 +4,9 @@ version = "0.1.0"
 authors = ["Tiago Tavares <bigtavadev@gmail.com>"]
 edition = "2021"
 
+[lib]
+path = "src/lib.rs"
+
 [[bin]]
 path = "src/main.rs"
 name = "b-actix"

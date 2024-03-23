@@ -1,22 +1,25 @@
 use std::net::TcpListener;
 
-use actix_web::{web, App, HttpServer};
+use actix_web::{App, HttpServer};
 use actix_web::dev::Server;
 use tracing_actix_web::TracingLogger;
-use utoipa::{openapi, OpenApi, Modify, ToSchema};
+use utoipa::OpenApi;
 use utoipa_swagger_ui::SwaggerUi;
 
-use crate::routes::health_check;
+use crate::routes::{get_health_check, *};
+use crate::schemas::HelthCheckResponse;
 
 pub fn run(listener: TcpListener) -> Result<Server, std::io::Error> {
     #[derive(OpenApi)]
-    #[openapi(paths(health_check::health_check))]
+    #[openapi(paths(get_health_check), components(schemas(HelthCheckResponse)))]
     struct ApiDoc;
-
+    
+    let openapi = ApiDoc::openapi();
     let server = HttpServer::new(move || {
         App::new()
+            .service(SwaggerUi::new("/docs/{_:.*}").url("/api-docs/openapi.json", openapi.clone(),))
             .wrap(TracingLogger::default())
-            .route("/health_check", web::get().to(health_check))
+            .service(get_health_check)
     })
     .listen(listener)?
     .run();
