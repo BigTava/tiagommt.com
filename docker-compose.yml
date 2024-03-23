@@ -2,24 +2,48 @@ version: "3.8"
 
 services:
   b-actix:
+    container_name: b-actix
     build:
       context: ./
-      dockerfile: ./services/nginx/Dockerfile
+      dockerfile: services/b-actix/Dockerfile
+    volumes:
+      - ./services/b-actix/:/app
+    ports:
+      - "8001:8000"
+    networks:
+      - default
+
+  b-db:
+    container_name: b-db
+    build:
+      context: ./services/b-db
+      dockerfile: Dockerfile
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    env_file:
+      - ./services/b-db/.env
+    networks:
+      - default
 
   f-main:
+    container_name: f-main
     build:
       context: ./services/f-main
-      dockerfile: ./services/f-main/Dockerfile.deploy
-    container_name: f-core
+      dockerfile: Dockerfile
     volumes:
-      - ./services/f-core:/app
+      - ./services/f-main:/app
       - /app/node_modules
     ports:
       - "3000:3000"
     depends_on:
-      - b-core
+      - b-actix
     networks:
       - default
+
+volumes:
+  postgres_data:
 
 networks:
   default:

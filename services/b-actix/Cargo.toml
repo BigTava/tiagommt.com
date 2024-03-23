@@ -23,6 +23,8 @@ envy = "0.4.2"
 serde = { version = "1.0.197", features = ["derive"] }
 tokio = { version = "1.36", features = ["macros", "rt-multi-thread"] }
 tracing-actix-web = "0.7.9"
+utoipa = { version = "4.2.0", features = ["actix_extras", "chrono"] }
+utoipa-swagger-ui = { version = "6.0.0", features = ["actix-web"] }
 uuid = { version = "1.7.0", features = ["v4"] }
 
 [dev-dependencies]
