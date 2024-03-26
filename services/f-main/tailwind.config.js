@@ -11,7 +11,8 @@ module.exports = {
         primary: '#4db5ff',
         'primary-variant': 'rgba(77, 181, 255, 0.4)',
         white: '#fff',
-        light: 'rgba(255, 255, 255, 0.6)',
+        grey: '#F2F2F2',
+        'dark-grey': 'rgba(80, 80, 80, 1)',
       },
       transitionDuration: {
         400: '400ms',

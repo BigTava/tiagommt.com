@@ -23,9 +23,19 @@ export function CTADefault() {
 
   return (
     <div className='cta'>
-      <ButtonDefault label='WEB 1' onClick={() => changeWebType('WEB1')} />
-      <ButtonDefault label='WEB 2' onClick={() => changeWebType('WEB2')} />
-      <ButtonPrimary label='WEB 3' onClick={() => changeWebType('WEB3')} />
+      <ButtonDefault label='WEB 1' onClick={() => changeWebType('WEB1')} color='transparent' />
+      <ButtonDefault
+        label='WEB 2'
+        onClick={() => changeWebType('WEB2')}
+        color='disabled'
+        disabled
+      />
+      <ButtonDefault
+        label='WEB 3'
+        onClick={() => changeWebType('WEB3')}
+        color='disabled'
+        disabled
+      />
     </div>
   )
 }
