@@ -6,12 +6,12 @@ use tracing_actix_web::TracingLogger;
 use utoipa::OpenApi;
 use utoipa_swagger_ui::SwaggerUi;
 
-use crate::routes::{get_health_check, *};
+use crate::routes::{get_health_check, get_cv, *};
 use crate::schemas::HelthCheckResponse;
 
 pub fn run(listener: TcpListener) -> Result<Server, std::io::Error> {
     #[derive(OpenApi)]
-    #[openapi(paths(get_health_check), components(schemas(HelthCheckResponse)))]
+    #[openapi(paths(get_health_check, get_cv), components(schemas(HelthCheckResponse)))]
     struct ApiDoc;
     
     let openapi = ApiDoc::openapi();
@@ -20,6 +20,7 @@ pub fn run(listener: TcpListener) -> Result<Server, std::io::Error> {
             .service(SwaggerUi::new("/docs/{_:.*}").url("/api-docs/openapi.json", openapi.clone(),))
             .wrap(TracingLogger::default())
             .service(get_health_check)
+            .service(get_cv)
     })
     .listen(listener)?
     .run();
