@@ -32,7 +32,7 @@ export function Main() {
 
   return (
     <>
-      <header id='home' className='h-screen pt-16 overflow-hidden'>
+      <header id='home' className='h-fit pt-16 overflow-hidden'>
         <div className='container header__container'>
           <h5>Hello I&apos;m</h5>
           <h1>
@@ -43,14 +43,16 @@ export function Main() {
             {webType === '' ? <h5>Pleese Choose...</h5> : <h5>Wise Choice!</h5>}
             {CTA[webType as WebType]}
           </div>
+          <div className='w-full mt-16 justify-center'>
+            <div className='max-w-[20rem] w-[94%] md:w-[22rem] h-[30rem] mx-auto pt-[5rem] px-[1.5rem] bg-gradient-to-b from-primary to-transparent  rounded-t-full  '>
+              <img className='h-[22rem] block mx-auto object-cover' src={me} alt='Tiago Tavares' />
+            </div>
+          </div>
 
           <div className='header__socials'>
             <Icon type='linkedIn' />
             <Icon type='gitHub' />
             <Icon type='gitLab' />
-          </div>
-          <div className='me'>
-            <img src={me} alt='Tiago Tavares' />
           </div>
 
           <a href='#contact' className='scroll__down'>
