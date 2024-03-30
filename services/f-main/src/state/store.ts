@@ -6,7 +6,7 @@ export const store = configureStore({
   reducer: {
     global: globalReducer,
   },
-  devTools: process.env.NODE_ENV !== 'production',
+  devTools: import.meta.env.REACT_APP_VARIABLE !== 'production',
 })
 
 export type AppState = ReturnType<typeof store.getState>
