@@ -1,6 +1,8 @@
+// Core
 import React, { MouseEventHandler } from 'react'
 import classNames from 'classnames'
 
+// Styles
 import './styles.css'
 
 interface IButtonProps {
@@ -30,23 +32,8 @@ export function ButtonDefault(props: IButtonProps) {
         [STYLES.disabled]: props.color === 'disabled',
       })}
       onClick={props.disabled ? () => null : props.onClick}
+      download={props.download}
     >
-      {props.label}
-    </a>
-  )
-}
-
-export function ButtonPrimary(props: IButtonProps) {
-  return (
-    <a href={props.href} className='btn btn-primary' onClick={props.onClick}>
-      {props.label}
-    </a>
-  )
-}
-
-export function ButtonDonwload(props: IButtonProps) {
-  return (
-    <a href={props.href} className='btn' download>
       {props.label}
     </a>
   )
