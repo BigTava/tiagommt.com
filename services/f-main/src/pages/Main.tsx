@@ -32,7 +32,7 @@ export function Main() {
 
   return (
     <>
-      <header id='home'>
+      <header id='home' className='h-screen pt-16 overflow-hidden'>
         <div className='container header__container'>
           <h5>Hello I&apos;m</h5>
           <h1>
