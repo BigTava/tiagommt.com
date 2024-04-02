@@ -1,5 +1,6 @@
 // Redux
 import { configureStore } from '@reduxjs/toolkit'
+
 import globalReducer from './global/reducer'
 
 export const store = configureStore({

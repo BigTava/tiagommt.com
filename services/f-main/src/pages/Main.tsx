@@ -1,21 +1,16 @@
-// Components
-import Nav from 'components/Nav'
-import Footer from 'components/Footer'
-import Icon from 'components/Icon'
-import me from 'assets/images/pfp.png'
 import { FaAward } from 'react-icons/fa'
 import { FiUsers } from 'react-icons/fi'
 import { VscFolderLibrary } from 'react-icons/vsc'
 
-// Assets
 import PFP from 'assets/images/pfp-about.jpg'
-
-// Redux
-import { useAppSelector, useAppDispatch } from 'state/hooks'
-import { updateWebType } from 'state/global/reducer'
+import me from 'assets/images/pfp.png'
 import { CTADefault, CTAWeb1, CTAWeb2, CTAWeb3 } from 'components/CTA'
+import Footer from 'components/Footer'
+import Icon from 'components/Icon'
+import Nav from 'components/Nav'
+import { updateWebType } from 'state/global/reducer'
+import { useAppDispatch, useAppSelector } from 'state/hooks'
 
-// Styles
 import './styles.css'
 
 type WebType = 'WEB1' | 'WEB2' | 'WEB3' | ''

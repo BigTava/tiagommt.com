@@ -1,6 +1,3 @@
-import FLASK_LOGO from 'assets/logos/flask-logo.svg'
-import FASTAPI_LOGO from 'assets/logos/fastapi-logo.svg'
-import DJANGO_LOGO from 'assets/logos/django-logo.svg'
 import ACTIX_LOGO from 'assets/logos/actix-logo.png'
 
 enum ERestFrameworks {

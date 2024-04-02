@@ -1,18 +1,10 @@
-// Components
+import cv from 'assets/docs/CV_Tiago_Tavares.pdf'
 import { ButtonDefault } from 'components/Button'
 import { InputSelect } from 'components/InputSelect'
-
-// Redux
-import { useAppDispatch } from 'state/hooks'
-import { updateWebType } from 'state/global/reducer'
-
-// Utils
 import { REST_FRAMEWORK_OPTIONS } from 'constants/rest-frameworks'
+import { updateWebType } from 'state/global/reducer'
+import { useAppDispatch } from 'state/hooks'
 
-// Assets
-import cv from 'assets/docs/CV_Tiago_Tavares.pdf'
-
-// Styles
 import './styles.css'
 
 export function CTADefault() {

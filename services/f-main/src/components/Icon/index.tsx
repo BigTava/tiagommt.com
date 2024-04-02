@@ -1,11 +1,11 @@
-import { FaUserTie, FaGithub } from 'react-icons/fa'
-import { HiAcademicCap } from 'react-icons/hi'
-import { VscFolderLibrary } from 'react-icons/vsc'
-import { BsLinkedin, BsPatchCheckFill } from 'react-icons/bs'
 import { AiFillGitlab, AiOutlineHome, AiOutlineUser } from 'react-icons/ai'
-import { BiCheck, BiBook, BiMessageSquareDetail } from 'react-icons/bi'
+import { BiBook, BiCheck, BiMessageSquareDetail } from 'react-icons/bi'
+import { BsLinkedin, BsPatchCheckFill } from 'react-icons/bs'
+import { FaGithub, FaUserTie } from 'react-icons/fa'
+import { HiAcademicCap } from 'react-icons/hi'
 import { MdOutlineEmail } from 'react-icons/md'
 import { RiMessengerLine } from 'react-icons/ri'
+import { VscFolderLibrary } from 'react-icons/vsc'
 
 import './styles.css'
 
