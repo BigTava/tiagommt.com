@@ -30,7 +30,7 @@ export function ButtonDefault(props: IButtonProps) {
       className={classNames({
         [STYLES.primary]: props.color === 'primary',
         [STYLES.transparent]: props.color === 'transparent',
-        [STYLES.disabled]: props.color === 'disabled',
+        [STYLES.disabled]: props.disabled,
       })}
       onClick={props.disabled ? () => null : props.onClick}
       download={props.download}

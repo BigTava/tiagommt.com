@@ -25,6 +25,7 @@
     "quotes": ["error", "single"],
     "no-duplicate-imports": "error",
     "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-duplicate-imports": "error",
     "sort-imports": ["error", { "ignoreCase": true, "ignoreDeclarationSort": true }],
     "import/order": [
       "error",
@@ -37,7 +38,7 @@
             "position": "before"
           },
           {
-            "pattern": "{assets/**,components/**,constants/**,pages/**,state/**,utils/**}",
+            "pattern": "{assets/**,components/**,constants/**,pages/**,state/**,typings/**,utils/**}",
             "group": "internal"
           }
         ],
