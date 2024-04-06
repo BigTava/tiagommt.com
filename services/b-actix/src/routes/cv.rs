@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use actix_web::{get, HttpRequest, Result};
+use actix_web::{get, Result};
 use actix_files::NamedFile;
 use utoipa;
 
@@ -14,7 +14,7 @@ use utoipa;
     tag = "CV",
 )]
 #[get("/cv")]
-pub async fn get_cv(req: HttpRequest) -> Result<NamedFile> {
-    let path: PathBuf = req.match_info().query("/app/static/CV_default.pdf").parse().unwrap();
-     Ok(NamedFile::open(path)?)
+pub async fn get_cv() -> Result<NamedFile> {
+    let path: PathBuf = PathBuf::from("/app/static/CV_default.pdf");
+    Ok(NamedFile::open(path)?)
 }

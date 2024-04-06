@@ -19,9 +19,6 @@ RUN cargo install cargo-watch
 COPY ${SERVICE_PATH} .
 RUN cargo build --release
 
-# Copy static
-COPY static ./src
-
 # Run entrypoint
 RUN chmod +x ./entrypoint.sh
 ENTRYPOINT ["/app/entrypoint.sh"]

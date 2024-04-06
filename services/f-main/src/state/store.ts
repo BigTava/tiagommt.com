@@ -1,11 +1,18 @@
-// Redux
 import { configureStore } from '@reduxjs/toolkit'
-import globalReducer from './global/reducer'
+import { apiSlice } from 'rest/rtk-client'
+
+import configurationReducer from './configuration/configuration.slice'
 
 export const store = configureStore({
   reducer: {
-    global: globalReducer,
+    configuration: configurationReducer,
+    api: apiSlice.reducer,
   },
+  middleware: (getDefaultMiddleware) =>
+    getDefaultMiddleware({
+      serializableCheck: false,
+    }).concat(apiSlice.middleware),
+
   devTools: import.meta.env.REACT_APP_VARIABLE !== 'production',
 })
 

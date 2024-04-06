@@ -1,18 +1,20 @@
-// Core
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { createRoot } from 'react-dom/client'
-import App from './App'
-
-// Redux
 import { Provider } from 'react-redux'
+
 import { store } from 'state/store'
 
-// Styles
+import App from './App'
 import './index.css'
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
 const root = createRoot(document.getElementById('root')!)
+const queryClient = new QueryClient()
+
 root.render(
   <Provider store={store}>
-    <App />
+    <QueryClientProvider client={queryClient}>
+      <App />
+    </QueryClientProvider>
   </Provider>,
 )
