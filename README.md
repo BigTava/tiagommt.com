@@ -9,8 +9,10 @@
 
 # Personal Website
 
-![Continuous Integration and Delivery](https://github.com/BigTava/tiagommt.com/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
 [![last-commit](https://img.shields.io/badge/last%20commit-18%2F04%2F2023-orange)](https://github.com/BigTava/tiagommt.com/-/commits/main?ref_type=heads)
+![Continuous Integration and Delivery](https://github.com/BigTava/tiagommt.com/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
+
+## Getting Started
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
