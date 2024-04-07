@@ -6,6 +6,7 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
+[![last-commit](https://img.shields.io/badge/last%20commit-18%2F04%2F2023-orange)](https://github.com/BigTava/tiagommt.com/-/commits/main?ref_type=heads)
 
 # Personal Website
 
@@ -25,3 +26,11 @@
 [license-url]: https://github.com/bigtava/tiagommt.com/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/tiagommtavares/
+
+[last-commit-shield]
+
+## Getting Started
+
+### Prerequisites
+
+- Install Docker
