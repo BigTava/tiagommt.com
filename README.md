@@ -6,11 +6,11 @@
 [![Issues][issues-shield]][issues-url]
 [![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
-[![last-commit](https://img.shields.io/badge/last%20commit-18%2F04%2F2023-orange)](https://github.com/BigTava/tiagommt.com/-/commits/main?ref_type=heads)
 
 # Personal Website
 
 ![Continuous Integration and Delivery](https://github.com/BigTava/tiagommt.com/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
+[![last-commit](https://img.shields.io/badge/last%20commit-18%2F04%2F2023-orange)](https://github.com/BigTava/tiagommt.com/-/commits/main?ref_type=heads)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 
