@@ -1,10 +1,9 @@
-// Core
 import { Fragment, useState } from 'react'
-import classNames from 'classnames'
 
-// Components
 import { Listbox, Transition } from '@headlessui/react'
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid'
+import classNames from 'classnames'
+
 import { TInputSelectProps, TOption } from './InputSelect.types'
 
 interface Option {
@@ -12,20 +11,11 @@ interface Option {
   avatar: string
 }
 
-interface SelectProps {
-  label?: string
-  options: Option[]
-  initialOption?: Option
-  onChange?: (option: Option) => void
-  className?: string
-}
-
 export const InputSelect: React.FC<TInputSelectProps> = function InputSelect({
   label,
   options,
   initialOption,
   onChange,
-  className,
 }) {
   const [selected, setSelected] = useState<Option>(initialOption || (options[0] as Option))
 
