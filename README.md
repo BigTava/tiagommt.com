@@ -1,38 +1,31 @@
-<!-- PROJECT SHIELDS -->
+# tiagommt.com
 
-[![Contributors][contributors-shield]][contributors-url]
-[![Forks][forks-shield]][forks-url]
-[![Stargazers][stars-shield]][stars-url]
-[![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
-[![LinkedIn][linkedin-shield]][linkedin-url]
+Personal website — a single-page React app.
 
-# Personal Website
+## Stack
 
-[![last-commit](https://img.shields.io/badge/last%20commit-18%2F04%2F2023-orange)](https://github.com/BigTava/tiagommt.com/-/commits/main?ref_type=heads)
-![Continuous Integration and Delivery](https://github.com/BigTava/tiagommt.com/workflows/Continuous%20Integration%20and%20Delivery/badge.svg?branch=master)
+- Vite + React 18 + TypeScript
+- Redux Toolkit for state
+- Tailwind CSS
+- Deployed on Vercel (static build)
 
-## Getting Started
+## Develop
 
-<!-- MARKDOWN LINKS & IMAGES -->
+```shell
+npm install
+npm start          # dev server on :3000
+```
 
-[contributors-shield]: https://img.shields.io/github/contributors/bigtava/tiagommt.com.svg?style=for-the-badge
-[contributors-url]: https://github.com/bigtava/tiagommt.com/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/bigtava/tiagommt.com.svg?style=for-the-badge
-[forks-url]: https://github.com/bigtava/tiagommt.com/network/members
-[stars-shield]: https://img.shields.io/github/stars/bigtava/tiagommt.com.svg?style=for-the-badge
-[stars-url]: https://github.com/bigtava/tiagommt.com/stargazers
-[issues-shield]: https://img.shields.io/github/issues/bigtava/tiagommt.com.svg?style=for-the-badge
-[issues-url]: https://github.com/bigtava/tiagommt.com/issues
-[license-shield]: https://img.shields.io/github/license/bigtava/tiagommt.com.svg?style=for-the-badge
-[license-url]: https://github.com/bigtava/tiagommt.com/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/tiagommtavares/
+## Build
 
-[last-commit-shield]
+```shell
+npm run build      # typecheck + production build to dist/
+npm run preview    # serve the built output
+```
 
-## Getting Started
+## Checks
 
-### Prerequisites
-
-- Install Docker
+```shell
+npm run lint
+npm run prettier:check
+```

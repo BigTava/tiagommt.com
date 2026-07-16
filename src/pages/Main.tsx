@@ -1,5 +1,4 @@
-import { useGetCvMutation } from 'rest/cvApiSlice'
-
+import cv from 'assets/docs/CV_Tiago_Tavares.pdf'
 import me from 'assets/images/pfp.png'
 import { CtaDefault, CtaWeb1, CtaWeb2 } from 'components/Cta'
 import Footer from 'components/Footer'
@@ -25,22 +24,12 @@ export function Main() {
     dispatch(updateRestFramework(restFramework))
   }
 
-  const [getCv] = useGetCvMutation()
-
-  const onCvClick = async () => {
-    try {
-      const result = await getCv(undefined).unwrap()
-      const hiddenElement = document.createElement('a')
-      const url = window.URL || window.webkitURL
-      const blobPDF = url.createObjectURL(result)
-      hiddenElement.href = blobPDF
-      hiddenElement.target = '_blank'
-      hiddenElement.download = 'CV'
-      hiddenElement.click()
-      return { data: null }
-    } catch (err) {
-      console.log(err)
-    }
+  const onCvClick = () => {
+    const hiddenElement = document.createElement('a')
+    hiddenElement.href = cv
+    hiddenElement.target = '_blank'
+    hiddenElement.download = 'CV_Tiago_Tavares.pdf'
+    hiddenElement.click()
   }
 
   const webTypeToCta: any = {
